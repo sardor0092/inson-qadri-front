@@ -34,12 +34,17 @@ import { CommonModule } from '@angular/common';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
 
   imports: [
     CommonModule,
+    
+        
+
 
     MatCheckboxModule,
     MatCheckboxModule,
@@ -78,6 +83,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
   ],
   exports: [
+    
+    FormsModule,
+    ReactiveFormsModule ,
 
     MatCheckboxModule,
     MatCheckboxModule,

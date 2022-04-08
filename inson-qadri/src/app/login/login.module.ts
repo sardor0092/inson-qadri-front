@@ -7,7 +7,7 @@ import { LoginRoutingModule } from "./login-router.module";
 
 
 @NgModule({
-    declarations: [],
+    declarations: [ ],
     imports: [
         CommonModule,
         FormsModule,
@@ -15,11 +15,8 @@ import { LoginRoutingModule } from "./login-router.module";
         MaterialModule,
         LoginRoutingModule,
         
-        
-        
-
     ]
 })
-//  fdgvfdgvfdsgvfdg
+
 
 export class LoginModule { }

@@ -5,5 +5,19 @@ import { Injectable } from '@angular/core';
 })
 export class StatsStoreService {
 
-  constructor() { }
+  private previousUrlKey = 'previousUrl';
+
+  constructor() {}
+
+  storeUrl(url: string): void {
+    sessionStorage.setItem(this.previousUrlKey, url);
+  }
+
+  getUrl(): string | null {
+    return sessionStorage.getItem(this.previousUrlKey) as string | null;
+  }
+
+  clearUrl(): void {
+    sessionStorage.removeItem(this.previousUrlKey);
+  }
 }

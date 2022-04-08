@@ -48,8 +48,8 @@ export class JwtUtil {
         if (data && data.roles) {
             return data.roles;
         }
+     
         return [];
 
     }
-
 }
