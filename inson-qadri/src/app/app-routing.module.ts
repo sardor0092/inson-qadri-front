@@ -5,12 +5,10 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
 
 const routes: Routes = [
 
- 
-
     {
       path: '',
       loadChildren: () =>
-        import('./login/public.module').then((m) => m.PublicModule),
+        import('./public/public.module').then((m) => m.PublicModule),
     },
     {
       path: 'admin',
