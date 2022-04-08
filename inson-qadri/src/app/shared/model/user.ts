@@ -1,6 +1,5 @@
 import { Lavozim } from "./Lavozim";
 
-
 export interface User{
     id: number;
     name:string;
@@ -10,7 +9,4 @@ export interface User{
     territory:number;
     password:string;
     lavozimlar: Array<Lavozim>;
-
-    
- 
 }
