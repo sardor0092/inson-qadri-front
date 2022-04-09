@@ -29,6 +29,7 @@ export class LoginService {
   register(user: User): Observable<any> {
     return this.http.post<any>(this.api + "/signup", user);
   }
+  
   logout(): void {
     this.jwtUtil.clear();
     this.accountService.authenticate(null);

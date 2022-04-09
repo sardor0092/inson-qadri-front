@@ -9,8 +9,8 @@ import { UserComponent } from "./entity/user/user.component";
 const routes: Routes = [
   {
    
-        path: 'tashkilot',
-        redirectTo: ""
+        path: '',
+        redirectTo: "tashkilot"
       },
       {
         path: 'user',
