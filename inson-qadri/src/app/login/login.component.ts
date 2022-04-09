@@ -13,9 +13,15 @@ import { StatsStoreService } from './stats-store.service';
 })
 export class LoginComponent implements OnInit {
 
+
+
+
+  
+
+
+
   loginForm: any;
   surovBajarilmoqda = false;
-
   constructor(private router: Router,
     private formBuilder: FormBuilder,
     private loginService: LoginService,
@@ -42,6 +48,7 @@ export class LoginComponent implements OnInit {
     this.loginService.login(loginParol).subscribe(
       () => {
         this.loginForm.reset()
+
         // this.dialogRef.close("save")
        
         

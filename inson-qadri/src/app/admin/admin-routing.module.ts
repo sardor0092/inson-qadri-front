@@ -3,12 +3,13 @@ import { RouterModule, Routes } from "@angular/router";
 
 import { UserRouteAccessGuard } from "../core/user-route-access.guard";
 import { Lavozim } from "../shared/model/Lavozim";
+import { TashkilotComponent } from "./entity/tashkilot/tashkilot.component";
 import { UserComponent } from "./entity/user/user.component";
 
 const routes: Routes = [
   {
    
-        path: '',
+        path: 'tashkilot',
         redirectTo: ""
       },
       {
@@ -20,7 +21,7 @@ const routes: Routes = [
         }
       },
       
-      // {path:'user' ,component:UserComponent ,canActivate:[UserRouteAccessGuard]},
+      { path:'tashkilot' ,component:TashkilotComponent},
 
 
     ]

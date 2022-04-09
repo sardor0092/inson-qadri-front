@@ -13,11 +13,14 @@ import { CoreModule } from '@angular/flex-layout';
 import { SharedModule } from './shared/shared.module';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { AuthInterceptor } from './shared/auth-interceptor';
+import { TashkilotComponent } from './admin/entity/tashkilot/tashkilot.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
+    
+    
     
      
   ],

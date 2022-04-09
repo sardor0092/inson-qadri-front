@@ -7,7 +7,7 @@ const routes: Routes = [
 
     {
   
-      path: '', redirectTo: '/login', pathMatch: 'full'},
+      path: '' , redirectTo: '/login', pathMatch: 'full'},
   
     {
       
@@ -16,13 +16,13 @@ const routes: Routes = [
       data: { icon: 'login', text: "Login oynasi" }
   
     },
+    
     {
     path: 'register',
     component: RegisterComponent,
     data: { icon: 'login', text: "register oynasi" }
 
   },
-    
   ];
 
 
