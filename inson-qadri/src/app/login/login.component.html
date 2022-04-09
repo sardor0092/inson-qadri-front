@@ -5,7 +5,7 @@
       
 
 
-    <form [formGroup]='loginForm' (ngSubmit)="onLogin()">
+    <form  (ngSubmit)="onLogin()">
 
 <div class="limiter">
     <div class="container-login100">
@@ -28,11 +28,11 @@
                 </div>
 
 
-                <div class="container-login100-form-btn m-t-30">
-                    <button style="height: 40px; " class="login100-form-btn">
+                
+                    <button   type="submit" style="height: 40px; " class="login100-form-btn container-login100-form-btn m-t-30">
                         Kirish
+                    
                     </button>
-                </div>
                 
                 <div class="flex-sb-m w-full p-t-3 p-b-24">
                     <div class="contact100-form-checkbox">
@@ -43,7 +43,7 @@
                     </div>
 
                     <label >
-                        <button  routerLink="/register" style=" height: 40px;" class="login100-form-btn m-t-30">Parolni qayta tiklash!</button>
+                        <button style=" height: 40px;" class="login100-form-btn m-t-30">Parolni qayta tiklash!</button>
                     </label>
                 </div>
 

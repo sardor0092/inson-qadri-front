@@ -28,9 +28,6 @@ export class AccauntService {
     return this.http.put(this.baseApi + "/password", user);
   }
 
-
-
- 
   public create(userlar: User): Observable<User> {
     return this.http.post<User>(this.baseApi, userlar);
   }
