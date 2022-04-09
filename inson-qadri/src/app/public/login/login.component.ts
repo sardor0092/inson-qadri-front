@@ -3,7 +3,7 @@ import { FormBuilder,  Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {  Router } from '@angular/router';
-import { JwtUtil } from '../core/jwt.util';
+import { JwtUtil } from 'src/app/core/jwt.util';
 import { LoginService } from './login.service';
 import { StatsStoreService } from './stats-store.service';
 

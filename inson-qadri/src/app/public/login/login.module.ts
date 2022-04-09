@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
 import { MaterialModule } from "src/app/shared/material/material.module";
 import { LoginRoutingModule } from "./login-router.module";
 
@@ -12,6 +13,8 @@ import { LoginRoutingModule } from "./login-router.module";
         ReactiveFormsModule,
         MaterialModule,
         LoginRoutingModule,
+        
+        
         
     ]
 })

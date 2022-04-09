@@ -3,7 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { map, Observable } from 'rxjs';
-import { StatsStoreService } from '../login/stats-store.service';
+import { StatsStoreService } from '../public/login/stats-store.service';
 import { AccauntService } from './accaunt.service';
 
 

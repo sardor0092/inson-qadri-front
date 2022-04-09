@@ -10,16 +10,11 @@ const routes: Routes = [
       loadChildren: () =>
         import('./public/public.module').then((m) => m.PublicModule),
     },
-    {
-      path: 'admin',
-      loadChildren: () =>
-        import('./admin/admin-module').then((m) => m.AdminModule),
-      canActivate: [UserRouteAccessGuard]
-    },
+
     {
       path: 'login',
       loadChildren: () =>
-        import('./login/login.module').then((m) => m.LoginModule),
+        import('./public/login/login.module').then((m) => m.LoginModule),
     },
     { path: '**', component: PageNotFoundComponent }
   ]

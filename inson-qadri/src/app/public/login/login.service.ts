@@ -1,11 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
+import { AccauntService } from 'src/app/core/accaunt.service';
+import { JwtUtil } from 'src/app/core/jwt.util';
+import { User } from 'src/app/shared/model/user';
 import { environment } from 'src/environments/environment';
-import { AccauntService } from '../core/accaunt.service';
-import { JwtUtil } from '../core/jwt.util';
-import { User } from '../shared/model/user';
-
 @Injectable({
   providedIn: 'root'
 })

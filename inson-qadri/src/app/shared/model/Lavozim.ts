@@ -1,5 +1,12 @@
 export enum Lavozim {
-    ADMIN = "ADMIN",
+    ADMIN = "ROLE_ADMIN",
+    USER="ROLE_USER",
+    SUPER_ADMIN="ROLE_SUPER_ADMIN",
+    VILOYAT= "ROLE_VIL",
+    HOKIM= "ROLE_HOKIM",
+    HUDUD=" ROLE_HUDUD",
+    MAHALLA=" ROLE_MAHALLA"
+
     
    
 }
