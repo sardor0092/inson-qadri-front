@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,  Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {  Router } from '@angular/router';
 import { JwtUtil } from '../core/jwt.util';
@@ -13,13 +14,6 @@ import { StatsStoreService } from './stats-store.service';
 })
 export class LoginComponent implements OnInit {
 
-
-
-
-  
-
-
-
   loginForm: any;
   surovBajarilmoqda = false;
   constructor(private router: Router,
@@ -28,14 +22,14 @@ export class LoginComponent implements OnInit {
     private _snackBar: MatSnackBar,
     private jwtUtil: JwtUtil,
     private stateStorageService: StatsStoreService,
-    // private dialogRef:MatDialogRef<LoginComponent>
+    //  private dialogRef:MatDialogRef<LoginComponent>
   
     ) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      login: [null, [Validators.required, Validators.minLength(6)]],
-      parol: [null, [Validators.required, Validators.minLength(6)]],
+      username: [null, [Validators.required, Validators.minLength(6)]],
+      password: [null, [Validators.required, Validators.minLength(6)]],
       rememberMe: [null],
     });
 

@@ -12,12 +12,12 @@ describe('RequestComponent', () => {
     })
     .compileComponents();
   });
-
+ 
   beforeEach(() => {
     fixture = TestBed.createComponent(RequestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  });  
 
   it('should create', () => {
     expect(component).toBeTruthy();
