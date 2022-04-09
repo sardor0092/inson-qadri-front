@@ -1,51 +1,43 @@
-
-
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-t-50 p-b-90">
-            <form [formGroup]='loginForm'  (ngSubmit)="onLogin()" class="login100-form validate-form flex-sb flex-w">
+            <form [formGroup]='loginForm' (ngSubmit)="onLogin()" class="login100-form validate-form flex-sb flex-w">
                 <span class="login100-form-title p-b-51">
                     Kirish
                 </span>
 
-            
-
-                
-                <div [formGroup]='loginForm' class="wrap-input100 validate-input m-b-16">
+                <div class="wrap-input100 validate-input m-b-16">
                     <input class="input100" type="email" formControlName='username' name="username" placeholder="Login">
                     <span class="focus-input100"></span>
                 </div>
-                
-                
-                <div [formGroup]='loginForm' class="wrap-input100 validate-input m-b-16">
-                    <input  class="input100 " type="password" formControlName='password' name="password" placeholder="Parol">
+
+                <div class="wrap-input100 validate-input m-b-16">
+                    <input class="input100 " type="password" formControlName='password' name="password"
+                        placeholder="Parol">
                     <span class="focus-input100"></span>
                 </div>
 
+                <button type="submit" style="height: 40px; "
+                    class="login100-form-btn container-login100-form-btn m-t-30">
+                    Kirish
 
-                
-                    <button   type="submit" style="height: 40px; " class="login100-form-btn container-login100-form-btn m-t-30">
-                        Kirish
-                    
-                    </button>
-                
+                </button>
+
                 <div class="flex-sb-m w-full p-t-3 p-b-24">
                     <div class="contact100-form-checkbox">
-                        
-                        <label >
-                            <button  routerLink="/register" style=" height: 40px;" class="login100-form-btn m-t-30" type="">Ro'yhatdan o'tish</button>
+
+                        <label>
+                            <button routerLink="/register" style=" height: 40px;" class="login100-form-btn m-t-30"
+                                type="">Ro'yhatdan o'tish</button>
                         </label>
                     </div>
 
-                    <label >
-                        <button style=" height: 40px;" class="login100-form-btn m-t-30" type="submit">Parolni qayta tiklash!</button>
+                    <label>
+                        <button style=" height: 40px;" class="login100-form-btn m-t-30" type="submit">Parolni qayta
+                            tiklash!</button>
                     </label>
                 </div>
 
-               
-
             </form>
-            
+        </div>
     </div>
-</div>
-

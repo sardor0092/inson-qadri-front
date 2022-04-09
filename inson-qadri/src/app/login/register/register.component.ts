@@ -12,9 +12,6 @@ import { LoginService } from '../login.service';
 })
 export class RegisterComponent implements OnInit {
 
-
-
-
   surovBajarilmoqda = false;
   registerForm: any;
   minDate: Date;
