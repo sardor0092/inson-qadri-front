@@ -3,21 +3,22 @@
         <div class="card card-5">
 
             <div class="card-body">
-                <form>
+                <form [formGroup]='registerForm' (ngSubmit)="onRegister()">
                     <div class="form-row m-b-55">
 
                         <div class="value">
                             <div class="row row-space">
                                 <div class="col-2">
                                     <div class="input-group-desc">
-                                        <input class="input--style-5" type="text" placeholder="Ism" name="first_name">
+                                        <input class="input--style-5" formControlName='firstname' type="text"
+                                            placeholder="Ism" name="first_name">
 
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="input-group-desc">
-                                        <input class="input--style-5" type="text" placeholder="Familiya"
-                                            name="last_name">
+                                        <input class="input--style-5" formControlName='lastname' type="text"
+                                            placeholder="Familiya" name="last_name">
 
                                     </div>
                                 </div>
@@ -30,13 +31,15 @@
                             <div class="row row-space">
                                 <div class="col-2">
                                     <div class="input-group-desc">
-                                        <input class="input--style-5" type="text" placeholder="Sharif" name="sharif">
+                                        <input class="input--style-5" formControlName='fatherName' type="text"
+                                            placeholder="Sharif" name="sharif">
 
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="input-group-desc">
-                                        <input class="input--style-5" type="tel" placeholder="Telefon:" name="tel">
+                                        <input class="input--style-5" formControlName='username' type="tel"
+                                            placeholder="Telefon:" name="tel">
 
                                     </div>
                                 </div>
@@ -50,24 +53,47 @@
                             <div class="row row-space">
                                 <div class="col-2">
                                     <div class="input-group-desc">
-                                        <input class="input--style-5" type="text" placeholder="Sharif" name="sharif">
+                                        <input class="input--style-5" type="text" placeholder="Mahalla" name="sharif">
 
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="input-group-desc">
-                                        <input class="input--style-5" type="tel" placeholder="Xonadon" name="tel">
+                                        <input class="input--style-5" type="tel" placeholder="Ko'cha" name="tel">
 
                                     </div>
                                 </div>
                             </div>
                             <div class="input-group-desc">
-                                <input style="margin-top: 40px;" class="input--style-5" type="tel"
-                                    placeholder="Telefon:" name="tel">
- 
-                                    <button class="btn  btn-primary" style="margin-top: 50px; width: 100%;"  type="submit">Ro'yhatdan
-                                        o'tish</button>
+                                <input style="margin-top: 40px;" formControlName='firstname' class="input--style-5"
+                                    type="tel" placeholder="Xonadon:" name="tel">
+
+
                             </div>
+
+
+                            <div style="margin-top: 40px;" class="row row-space ">
+                                <div class="col-2">
+                                    <div class="input-group-desc">
+                                        <input class="input--style-5" formControlName='firstname' type="text"
+                                            placeholder="Parol" name="password">
+
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group-desc">
+                                        <input class="input--style-5" formControlName='lastname' type="text"
+                                            placeholder="Parolni qayta kiriting" name="password">
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <button class="btn  btn-info" style="margin-top: 50px; width: 100%;"
+                                type="submit">Ro'yhatdan
+                                o'tish</button>
+
                         </div>
 
                     </div>
