@@ -16,15 +16,13 @@ export class LoginComponent implements OnInit {
 
   loginForm: any;
   surovBajarilmoqda = false;
+
   constructor(private router: Router,
     private formBuilder: FormBuilder,
     private loginService: LoginService,
     private _snackBar: MatSnackBar,
     private jwtUtil: JwtUtil,
-    private stateStorageService: StatsStoreService,
-    //  private dialogRef:MatDialogRef<LoginComponent>
-  
-    ) { }
+    private stateStorageService: StatsStoreService) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -41,23 +39,16 @@ export class LoginComponent implements OnInit {
     console.log(loginParol);
     this.loginService.login(loginParol).subscribe(
       () => {
-        this.loginForm.reset()
-
-        // this.dialogRef.close("save")
-       
-        
         this.surovBajarilmoqda = false;
-        
-        
 
         let roles = this.jwtUtil.getRoles();
 
         const prevUrl = this.stateStorageService.getUrl();
         if (prevUrl) {
           // TODO oxirgi kirgan manzil bo'yicha yunaltirish
-          this.router.navigate(["/admin"]);
+          this.router.navigate(["/"]);
         } else {
-          this.router.navigate(['/admin']);
+          this.router.navigate(['/']);
         }
       },
       (error) => {
@@ -67,17 +58,14 @@ export class LoginComponent implements OnInit {
             message = error.error.message;
           }
         }
-       
         this._snackBar.open(message, 'X', {
           duration: 4000,
           verticalPosition: 'bottom',
 
         });
         this.surovBajarilmoqda = false;
-        
       }
     )
 
   }
-
 }

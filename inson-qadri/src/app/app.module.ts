@@ -12,6 +12,7 @@ import { CoreModule } from './core/core.module';
 import { DashboardComponent } from './user/dashboard/dashboard.component';
 import { TashkilotComponent } from './user/tashkilot/tashkilot.component';
 import { ArizaComponent } from './user/ariza/ariza.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ArizaComponent } from './user/ariza/ariza.component';
     MaterialModule,    
     CoreModule,
     SharedModule,
+    BrowserAnimationsModule
   ],
   providers: [
 

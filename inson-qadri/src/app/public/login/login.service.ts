@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class LoginService {
 
-  api = environment.baseUrl + "/api/auth";
+  api = environment.baseUrl+"/api/auth";
 
   constructor(public jwtUtil: JwtUtil, public http: HttpClient, public accountService: AccauntService) { }
 
@@ -21,14 +21,12 @@ export class LoginService {
     .pipe( map((token)=>{     
         this.jwtUtil.save(token.token, loginParol.rememberMe);
         this.accountService.identity(true)
-        
       })
     );
   }
   register(user: User): Observable<any> {
     return this.http.post<any>(this.api + "/signup", user);
   }
-  
   logout(): void {
     this.jwtUtil.clear();
     this.accountService.authenticate(null);
