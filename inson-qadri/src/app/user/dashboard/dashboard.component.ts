@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +6,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-   isClosed: boolean = false;
+ opened = false;
+
+
+toggleSide(){
+  this.opened = !this.opened;
+}
+
+
   
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
     

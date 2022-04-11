@@ -3,6 +3,10 @@ import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn,
 import { MatDialogRef } from '@angular/material/dialog/dialog-ref';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { Mahalla } from 'src/app/shared/model/mahalla';
+import { MahallaService } from 'src/app/shared/service/mahalla.service';
+import { TumanService } from 'src/app/shared/service/tuman.service';
+import { ViloyatService } from 'src/app/shared/service/viloyat.service';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -16,10 +20,15 @@ export class RegisterComponent implements OnInit {
   registerForm: any;
   minDate: Date;
   maxDate: Date;
+  mahallalar!:Mahalla;
 
   constructor(
     
     private router: Router,
+    private mahallaService: MahallaService,
+    private tumanService: TumanService,
+    private viloyatService: ViloyatService,
+
     private formBuilder: FormBuilder,
     private loginService: LoginService,
     private _snackBar: MatSnackBar) {
@@ -38,8 +47,39 @@ export class RegisterComponent implements OnInit {
       username: [null],
       password: [null, [Validators.required, Validators.minLength(6)]],
       confirmPassword: [null, [Validators.required, Validators.minLength(6)]],
+      viloyat: [null],
+      tuman: [null],
+      mahalla: [null],
     });
+    
+   
   }
+  
+  ngAfterViewInit(): void {
+    this.mahallaService.getAll().subscribe(
+      (success: any) => {
+        this.mahallaService = success;
+        console.log(success);
+        
+      }
+    )
+    this.viloyatService.getAll().subscribe(
+      (success: any) => {
+        this.viloyatService= success;
+        console.log(success);
+        
+      }
+    )
+    this.tumanService.getAll().subscribe(
+      (success: any) => {
+        this.tumanService = success;
+        console.log(success);
+        
+      }
+    )
+    
+  }
+
   checkIfMatchingPasswords(passwordKey: string, passwordConfirmationKey: string) {
     return (group: FormGroup) => {
       let passwordInput = this.registerForm.controls[passwordKey],
@@ -52,7 +92,7 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
-
+  
   onRegister() {
     const register = this.registerForm.getRawValue();
     this.surovBajarilmoqda = true;

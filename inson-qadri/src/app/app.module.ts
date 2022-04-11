@@ -13,6 +13,16 @@ import { DashboardComponent } from './user/dashboard/dashboard.component';
 import { TashkilotComponent } from './user/tashkilot/tashkilot.component';
 import { ArizaComponent } from './user/ariza/ariza.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TadbirkorComponent } from './user/tadbirkor/tadbirkor.component';
+import { MahallaComponent } from './user/mahalla/mahalla.component';
+import { ViloyatComponent } from './user/viloyat/viloyat.component';
+import { FoyadalilinkComponent } from './user/foyadalilink/foyadalilink.component';
+import { KutubxonaComponent } from './user/kutubxona/kutubxona.component';
+import { TaminotchiComponent } from './user/taminotchi/taminotchi.component';
+import { TadbirkorSubyektComponent } from './user/tadbirkor-subyekt/tadbirkor-subyekt.component';
+import { MenyuComponent } from './user/menyu/menyu.component';
+import { HokimYordamComponent } from './user/hokim-yordam/hokim-yordam.component';
+import { TashkilotArizaComponent } from './user/tashkilot-ariza/tashkilot-ariza.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +30,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DashboardComponent,
     TashkilotComponent,
     ArizaComponent,
+    TadbirkorComponent,
+    MahallaComponent,
+    ViloyatComponent,
+    FoyadalilinkComponent,
+    KutubxonaComponent,
+    TaminotchiComponent,
+    TadbirkorSubyektComponent,
+    MenyuComponent,
+    HokimYordamComponent,
+    TashkilotArizaComponent,
+    
     
     
     

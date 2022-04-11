@@ -47,13 +47,32 @@
                         </div>
                     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <div class="form-row m-b-55">
 
                         <div class="value">
                             <div class="row row-space">
                                 <div class="col-2">
-                                    <div class="input-group-desc">
-                                        <input class="input--style-5" type="text" placeholder="Mahalla" name="sharif">
+                                    <div  class="form-group">
+                                        <label for="exampleFormControlSelect1">Mahalla</label>
+                                        <select class="form-control" id="exampleFormControlSelect1 "
+                                            formControlName='mahalla'>
+                                            <option [value]='mahallalar' *ngForOf="let mahalla of mahallalar"   >
+                                                {{mahalla.nom}}</option>
+                                        </select>
 
                                     </div>
                                 </div>
@@ -72,17 +91,66 @@
                             </div>
 
 
+
+                            <!-- <mat-form-field appearance="fill">
+                                <mat-label>MahsulotTur</mat-label>
+                                <mat-select formControlName='mahalla'>
+                                  <mat-option [value]='mahallalar' *ngFor="let mahalla of mahallalar">{{mahalla.nom}}
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             <div style="margin-top: 40px;" class="row row-space ">
                                 <div class="col-2">
                                     <div class="input-group-desc">
-                                        <input class="input--style-5" formControlName='firstname' type="text"
+                                        <input class="input--style-5" formControlName='password' type="text"
                                             placeholder="Parol" name="password">
 
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="input-group-desc">
-                                        <input class="input--style-5" formControlName='lastname' type="text"
+                                        <input class="input--style-5" formControlName='confirmPassword' type="text"
                                             placeholder="Parolni qayta kiriting" name="password">
 
                                     </div>

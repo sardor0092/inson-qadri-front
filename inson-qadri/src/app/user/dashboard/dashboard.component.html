@@ -1,75 +1,126 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+  <title>Sidebar 03</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-  <body>
-		
-		<div class="wrapper d-flex align-items-stretch">
-			<nav id="sidebar" class="active">
-				<h1><a href="index.html" class="logo">M.</a></h1>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper d-flex align-items-stretch">
+   
+  
+
+    <nav id="sidebar" class="">
+      <div #drawer class="custom-menu " mode="side">
+
+        <button type="button" id="sidebarCollapse" class="btn btn">
+
+          <span class="active" class="sr-only">Toggle Menu</span>
+          <!-- <mat-icon>view_headline</mat-icon> -->
+        </button>
+      </div>
+      <div class="profile-userpic">
+
+        <img
+          src="https://gravatar.com/avatar/31b64e4876d603ce78e04102c67d6144?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
+          class="img-responsive" alt="">
+
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            Sardor Haydarov
+          </div>
+          <div class="profile-usertitle-job">
+            Shuhrat o'g'li
+          </div>
+        </div>
+
+      </div>
+
+      <div class="p-4">
         <ul class="list-unstyled components mb-5">
           <li class="active">
-            <a href="#"><span class="fa fa-home"></span> Home</a>
+            <a routerLink="ariza"><span class="fa fa-sticky-note mr-3"></span> Ariza yuborish </a>
           </li>
           <li>
-              <a href="#"><span class="fa fa-user"></span> About</a>
+            <a routerLink="tadbirkor"><span class="fa fa-coin mr-3"></span> Tadbirkorlik</a>
           </li>
           <li>
-            <a href="#"><span class="fa fa-sticky-note"></span> Blog</a>
+            <a routerLink="mahalla"><span class="fa fa-briefcase mr-3"></span> Mahalla mutasaddilari</a>
           </li>
           <li>
-            <a href="#"><span class="fa fa-cogs"></span> Services</a>
+            <a routerLink="viloyat"><span class="fa fa-sticky-note mr-3"></span> Viloyat tashkiotlar</a>
           </li>
           <li>
-            <a href="#"><span class="fa fa-paper-plane"></span> Contacts</a>
+            <a routerLink="havola"><span class="fa fa-paper-plane mr-3"></span> Foydali havolalar</a>
           </li>
+          <li>
+            <a routerLink="kutubxona"><span class="fa fa-paper-plane mr-3"></span> Kutubxona</a>
+          </li>
+          <li>
+            <a routerLink="subyekt"><span class="fa fa-paper-plane mr-3"></span> Tadbirkorlik subyektlari</a>
+          </li>
+          <li>
+            <a routerLink="taminot"><span class="fa fa-paper-plane mr-3"></span> Ta'minotchi</a>
+          </li>
+
         </ul>
 
+
+
         <div class="footer">
-        	<p>
-					  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
-					</p>
+          <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            &copy;
+            <script>document.write(new Date().getFullYear());</script> "Inson qadri" dasturi 1.00 version Copyright
+            Qarshi IT techno park 2022 <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+              target="_blank">Colorlib.com</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
         </div>
-    	</nav>
 
-        <!-- Page Content  -->
-      <div id="content" class="p-4 p-md-5">
+      </div>
+    </nav>
 
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
 
-            <button type="button" id="sidebarCollapse" class="btn btn-primary">
-              <i class="fa fa-bars"></i>
-              <span class="sr-only">Toggle Menu</span>
-            </button>
-            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-bars"></i>
-            </button> -->
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="nav navbar-nav ml-auto">
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Menyu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#">Bosh sahifa <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Profil</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Chiqish</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        
+    
+            </ul>
+        </div>
+    </nav>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 
-<!-- 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script> -->
+  <!-- <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script> -->
+</body>
 
+</html>
