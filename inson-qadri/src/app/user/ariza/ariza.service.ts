@@ -13,7 +13,7 @@ export class ArizaService {
   getAll():Observable<Ariza[]> { 
     return this.http.get<Ariza[]>(this.api);
   }
-  create(user: Ariza): Observable<Ariza> {
+  create(user: Ariza): Observable<Ariza>  {
     return this.http.post<Ariza>(this.api, user);
   }
   update(user: Ariza): Observable<Ariza> {

@@ -8,5 +8,5 @@ export interface User{
     phone:string;
     territory:number;
     password:string;
-    lavozimlar: Array<Lavozim>;
+    roles: Array<Lavozim>;
 }

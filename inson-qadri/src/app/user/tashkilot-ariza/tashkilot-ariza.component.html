@@ -2,10 +2,9 @@
 
     <mat-form-field appearance="fill">
         <mat-label>Tashkilotni tanlang</mat-label>
-        <mat-select disableRipple>
-          <mat-option value="1">Viloyat energitika</mat-option>
-          <mat-option value="2">Viloyat gaz ta'minot</mat-option>
-          <mat-option value="3">Davlat soliq qo'mitasi</mat-option>
+        <mat-select disableRipple >
+          
+          <mat-option value="2" *ngFor="let l of tashkilotlar">{{l?.name}}</mat-option>
         </mat-select>
       </mat-form-field>
     <div class="row">

@@ -34,16 +34,17 @@
           class="img-responsive" alt="">
 
         <div class="profile-usertitle">
-          <div class="profile-usertitle-name">
-            Sardor Haydarov
+          <div class="profile-usertitle-name" *ngIf="user">
+            {{user.name}} {{user.surname}}
           </div>
-          <div class="profile-usertitle-job">
-            Shuhrat o'g'li
+          <div class="profile-usertitle-job" *ngFor="let l of user?.roles">
+            {{l}}
+          
           </div>
         </div>
 
       </div>
-
+     
       <div class="p-4">
         <ul class="list-unstyled components mb-5">
           <li class="active">

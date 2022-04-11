@@ -12,7 +12,7 @@ export class AccauntService {
   private userIdentity: User | null = null;
   private authenticationState = new ReplaySubject<User | null>(1);
   private userCache$?: Observable<User | null>;
-  private baseApi = environment.baseUrl + "/api/auth";
+  private baseApi = environment.baseUrl + "/api/account";
   uploadProfileImage: any;
   constructor(
     private http: HttpClient,
@@ -41,16 +41,16 @@ export class AccauntService {
     this.authenticationState.next(this.userIdentity);
   }
 
-  hasAnyAuthority(lavozimlar: string[] | string): boolean {
+  hasAnyAuthority(roles: string[] | string): boolean {
     if (!this.userIdentity) {
       return false;
     }
-    if(!this.userIdentity.lavozimlar) return false;
+    if(!this.userIdentity.roles) return false;
     
-    if (!Array.isArray(lavozimlar)) {
-      lavozimlar = [lavozimlar];
+    if (!Array.isArray(roles)) {
+      roles = [roles];
     }
-    return this.userIdentity.lavozimlar.some((lavozim: string) => lavozimlar.includes(lavozim));
+    return this.userIdentity.roles.some((lavozim: string) => roles.includes(lavozim));
   }
 
   identity(force?: boolean): Observable<User | null> {

@@ -1,6 +1,9 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AccauntService } from 'src/app/core/accaunt.service';
 import { JwtUtil } from 'src/app/core/jwt.util';
+import { Lavozim } from 'src/app/shared/model/Lavozim';
+import { User } from 'src/app/shared/model/user';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,13 +18,31 @@ toggleSide(){
   this.opened = !this.opened;
 }
 
+root = '';
 
+@Output() changeRoute = new EventEmitter<string>();
+routes!: any[];
+creator = false;
+admin = false;
+roles!: string[];
+user!: User | null;
 
 
   
-  constructor(private jwtUtil:JwtUtil,private router:Router) { }
+  constructor(public accountService: AccauntService,
+    public router: Router,
+    public activatedRoute: ActivatedRoute,
+    private jwtUtil: JwtUtil) { }
 
-  ngOnInit() {
+  ngOnInit() {  this.accountService.getAuthenticationState().subscribe(
+    data => {
+  
+      this.user = data;
+        this.creator = this.accountService.hasAnyAuthority(Lavozim.SUPER_ADMIN);
+        this.admin = this.accountService.hasAnyAuthority(Lavozim.ADMIN);
+     
+      }
+  );
     
   }
 
