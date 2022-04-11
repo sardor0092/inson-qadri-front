@@ -4,6 +4,8 @@ import { MatDialogRef } from '@angular/material/dialog/dialog-ref';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Mahalla } from 'src/app/shared/model/mahalla';
+import { Tuman } from 'src/app/shared/model/tuman';
+import { Viloyat } from 'src/app/shared/model/viloyat';
 import { MahallaService } from 'src/app/shared/service/mahalla.service';
 import { TumanService } from 'src/app/shared/service/tuman.service';
 import { ViloyatService } from 'src/app/shared/service/viloyat.service';
@@ -21,6 +23,8 @@ export class RegisterComponent implements OnInit {
   minDate: Date;
   maxDate: Date;
   mahallalar!:Mahalla;
+  viloyalatlar!:Viloyat;
+  tumanlar!:Tuman;
 
   constructor(
     

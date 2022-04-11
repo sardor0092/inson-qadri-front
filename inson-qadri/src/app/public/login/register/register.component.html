@@ -66,30 +66,47 @@
                         <div class="value">
                             <div class="row row-space">
                                 <div class="col-2">
-                                    <div  class="form-group">
-                                        <label for="exampleFormControlSelect1">Mahalla</label>
-                                        <select class="form-control" id="exampleFormControlSelect1 "
-                                            formControlName='mahalla'>
-                                            <option [value]='mahallalar' *ngForOf="let mahalla of mahallalar"   >
-                                                {{mahalla.nom}}</option>
+                                    <div class="form-group">
+
+                                        <select formControlName='viloyat' aria-placeholder="Viloyat"
+                                            class="form-select input--style-5" aria-label="Default select example">
+                                            <option>Viloyat</option>
+                                            <option selected [value]='viloyalatlar'
+                                                *ngForOf="let viloyat of viloyalatlar">
+                                                {{viloyat.name}} Viloyat</option>
+
                                         </select>
 
                                     </div>
                                 </div>
+
+
                                 <div class="col-2">
-                                    <div class="input-group-desc">
-                                        <input class="input--style-5" type="tel" placeholder="Ko'cha" name="tel">
+                                    <div class="form-group">
+
+                                        <select formControlName='tuman' aria-placeholder="Tuman"
+                                            class="form-select input--style-5" aria-label="Default select example">
+                                            <option>Tuman</option>
+                                            <option selected [value]='tumanlar' *ngForOf="let tuman of tumanlar">
+                                                {{tuman.name}} Tuman</option>
+
+                                        </select>
 
                                     </div>
                                 </div>
+
+                                <div class="form-group">
+
+                                    <select style="margin-top: 40px;" formControlName='tuman' aria-placeholder="Tuman"
+                                        class="form-select input--style-5" aria-label="Default select example">
+                                        <option>mahalla</option>
+                                        <option selected [value]='mahallalar' *ngForOf="let mahalla of mahallalar">
+                                            {{mahalla.name}} Mahalla</option>
+
+                                    </select>
+
+                                </div>
                             </div>
-                            <div class="input-group-desc">
-                                <input style="margin-top: 40px;" formControlName='firstname' class="input--style-5"
-                                    type="tel" placeholder="Xonadon:" name="tel">
-
-
-                            </div>
-
 
 
                             <!-- <mat-form-field appearance="fill">
@@ -99,6 +116,8 @@
                                   </mat-option>
                                 </mat-select>
                               </mat-form-field> -->
+
+
 
 
 

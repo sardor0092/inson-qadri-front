@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TashkilotArizaComponent implements OnInit {
 
+
+  csvInputChange(fileInputEvent: any) {
+    console.log(fileInputEvent.target.files[0]);
+  }
+
   constructor() { }
 
   ngOnInit(): void {
