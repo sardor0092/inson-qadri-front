@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArizaService } from '../ariza/ariza.service';
 
 @Component({
   selector: 'app-hokim-yordam',
@@ -11,7 +12,8 @@ export class HokimYordamComponent implements OnInit {
     console.log(fileInputEvent.target.files[0]);
   }
 
-  constructor() { }
+  constructor(public arizaService:ArizaService
+    ) { }
 
   ngOnInit(): void {
   }

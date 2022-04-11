@@ -12,6 +12,7 @@ import { TadbirkorSubyektComponent } from './user/tadbirkor-subyekt/tadbirkor-su
 import { TadbirkorComponent } from './user/tadbirkor/tadbirkor.component';
 import { ViloyatComponent } from './user/viloyat/viloyat.component';
 import { TashkilotArizaComponent } from './user/tashkilot-ariza/tashkilot-ariza.component';
+import { ProfilComponent } from './user/profil/profil.component';
 
 const routes: Routes = [
 
@@ -43,7 +44,8 @@ const routes: Routes = [
       { path: 'taminot', component: TadbirkorSubyektComponent },
       {path:  'menyu' ,component:MenyuComponent},
        {path : 'hokimyordam',component:HokimYordamComponent},
-       {path: 'tashkilotariza',component:TashkilotArizaComponent}
+       {path: 'tashkilotariza',component:TashkilotArizaComponent},
+       {path:'profil' ,component:ProfilComponent}
     ]
   },
   

@@ -23,6 +23,7 @@ import { TadbirkorSubyektComponent } from './user/tadbirkor-subyekt/tadbirkor-su
 import { MenyuComponent } from './user/menyu/menyu.component';
 import { HokimYordamComponent } from './user/hokim-yordam/hokim-yordam.component';
 import { TashkilotArizaComponent } from './user/tashkilot-ariza/tashkilot-ariza.component';
+import { ProfilComponent } from './user/profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { TashkilotArizaComponent } from './user/tashkilot-ariza/tashkilot-ariza.
     MenyuComponent,
     HokimYordamComponent,
     TashkilotArizaComponent,
+    ProfilComponent,
     
     
     

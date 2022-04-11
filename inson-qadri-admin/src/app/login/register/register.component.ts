@@ -1,13 +1,8 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog/dialog-ref';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { Mahalla } from 'src/app/shared/model/mahalla';
-import { Tuman } from 'src/app/shared/model/tuman';
-import { Viloyat } from 'src/app/shared/model/viloyat';
-import { MahallaService } from 'src/app/shared/service/mahalla.service';
-import { TumanService } from 'src/app/shared/service/tuman.service';
-import { ViloyatService } from 'src/app/shared/service/viloyat.service';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -21,16 +16,10 @@ export class RegisterComponent implements OnInit {
   registerForm: any;
   minDate: Date;
   maxDate: Date;
-  viloyalatlar!:Viloyat[]
-  tumanlar!:Tuman[];
-  mahallalar!: Mahalla[];
+
   constructor(
     
     private router: Router,
-    private mahallaService: MahallaService,
-    private tumanService: TumanService,
-    private viloyatService: ViloyatService,
-
     private formBuilder: FormBuilder,
     private loginService: LoginService,
     private _snackBar: MatSnackBar) {
@@ -49,51 +38,8 @@ export class RegisterComponent implements OnInit {
       username: [null],
       password: [null, [Validators.required, Validators.minLength(6)]],
       confirmPassword: [null, [Validators.required, Validators.minLength(6)]],
-      viloyat: [null],
-      tuman: [null],
-      mahalla: [null],
-      title:[null]
     });
-    
-   
-
-
-
   }
-  
-  ngAfterViewInit(): void {
-    this.viloyatService.getAll().subscribe(
-      (success: any) => {
-        this.viloyalatlar = success;
-        console.log(success);
-        
-      }
-    )
-    this.tumanService.getAll().subscribe(
-      (success: any) => {
-        this.tumanlar= success;
-        console.log(success);
-        
-      }
-    )
-    this.mahallaService.getAll().subscribe(
-      (success: any) => {
-        this.mahallalar = success;
-        console.log(success);
-        
-      }
-    )
-    
-  }
-
-
-
-
-
-
-
-
-
   checkIfMatchingPasswords(passwordKey: string, passwordConfirmationKey: string) {
     return (group: FormGroup) => {
       let passwordInput = this.registerForm.controls[passwordKey],
@@ -106,7 +52,7 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
-  
+
   onRegister() {
     const register = this.registerForm.getRawValue();
     this.surovBajarilmoqda = true;
