@@ -50,19 +50,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
                     <div class="form-row m-b-55">
-
                         <div class="value">
                             <div class="row row-space">
                                 <div class="col-2">
@@ -72,7 +60,7 @@
                                             class="form-select input--style-5" aria-label="Default select example">
                                             <option>Viloyat</option>
                                             <option selected [value]='viloyalatlar'
-                                                *ngForOf="let viloyat of viloyalatlar">
+                                                *ngFor="let viloyat of viloyalatlar">
                                                 {{viloyat.name}} Viloyat</option>
 
                                         </select>
@@ -87,7 +75,7 @@
                                         <select formControlName='tuman' aria-placeholder="Tuman"
                                             class="form-select input--style-5" aria-label="Default select example">
                                             <option>Tuman</option>
-                                            <option selected [value]='tumanlar' *ngForOf="let tuman of tumanlar">
+                                            <option selected [value]='tumanlar' *ngFor="let tuman of tumanlar">
                                                 {{tuman.name}} Tuman</option>
 
                                         </select>
@@ -97,16 +85,21 @@
 
                                 <div class="form-group">
 
-                                    <select style="margin-top: 40px;" formControlName='tuman' aria-placeholder="Tuman"
+                                    <select   style="margin-top: 40px;" formControlName='tuman' aria-placeholder="Tuman"
                                         class="form-select input--style-5" aria-label="Default select example">
-                                        <option>mahalla</option>
-                                        <option selected [value]='mahallalar' *ngForOf="let mahalla of mahallalar">
+                                        <option >mahalla</option>
+                                        <option selected [value]='mahallalar' *ngFor="let mahalla of mahallalar">
                                             {{mahalla.name}} Mahalla</option>
 
                                     </select>
 
                                 </div>
                             </div>
+
+
+
+
+
 
 
                             <!-- <mat-form-field appearance="fill">

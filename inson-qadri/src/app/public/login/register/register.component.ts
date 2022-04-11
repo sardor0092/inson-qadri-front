@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog/dialog-ref';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Mahalla } from 'src/app/shared/model/mahalla';
@@ -22,10 +21,9 @@ export class RegisterComponent implements OnInit {
   registerForm: any;
   minDate: Date;
   maxDate: Date;
-  mahallalar!:Mahalla;
-  viloyalatlar!:Viloyat;
-  tumanlar!:Tuman;
-
+  viloyalatlar!:[Viloyat]
+  tumanlar!:[Tuman];
+  mahallalar!: [Mahalla];
   constructor(
     
     private router: Router,
@@ -57,9 +55,26 @@ export class RegisterComponent implements OnInit {
     });
     
    
+
+
+
   }
   
   ngAfterViewInit(): void {
+    this.viloyatService.getAll().subscribe(
+      (success: any) => {
+        this.viloyatService = success;
+        console.log(success);
+        
+      }
+    )
+    this.tumanService.getAll().subscribe(
+      (success: any) => {
+        this.tumanService= success;
+        console.log(success);
+        
+      }
+    )
     this.mahallaService.getAll().subscribe(
       (success: any) => {
         this.mahallaService = success;
@@ -67,22 +82,16 @@ export class RegisterComponent implements OnInit {
         
       }
     )
-    this.viloyatService.getAll().subscribe(
-      (success: any) => {
-        this.viloyatService= success;
-        console.log(success);
-        
-      }
-    )
-    this.tumanService.getAll().subscribe(
-      (success: any) => {
-        this.tumanService = success;
-        console.log(success);
-        
-      }
-    )
     
   }
+
+
+
+
+
+
+
+
 
   checkIfMatchingPasswords(passwordKey: string, passwordConfirmationKey: string) {
     return (group: FormGroup) => {
