@@ -35,7 +35,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+import { SwiperModule } from 'swiper/angular';
 
 
 @NgModule({
@@ -79,7 +79,8 @@ import { BrowserModule } from '@angular/platform-browser';
     MatDatepickerModule,
     MatNativeDateModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SwiperModule
 
   ],
   exports: [
@@ -121,7 +122,8 @@ import { BrowserModule } from '@angular/platform-browser';
     MatDatepickerModule,
     MatNativeDateModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SwiperModule
 
 
   ],

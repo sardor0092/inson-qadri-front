@@ -12,7 +12,7 @@ export class AccauntService {
   private userIdentity: User | null = null;
   private authenticationState = new ReplaySubject<User | null>(1);
   private userCache$?: Observable<User | null>;
-  private baseApi = environment.baseUrl + "/api/account";
+  private baseApi = environment.baseUrl + "/api/accaunt";
   uploadProfileImage: any;
   constructor(
     private http: HttpClient,

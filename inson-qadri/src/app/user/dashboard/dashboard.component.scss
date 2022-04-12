@@ -3077,14 +3077,14 @@
   .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
     background-color: rgba(0, 123, 255, 0.5); }
   
-  .custom-switch {
+  .custom-tch {
     padding-left: 2.25rem; }
-    .custom-switch .custom-control-label::before {
+    .custom-tch .custom-control-label::before {
       left: -2.25rem;
       width: 1.75rem;
       pointer-events: all;
       border-radius: 0.5rem; }
-    .custom-switch .custom-control-label::after {
+    .custom-tch .custom-control-label::after {
       top: calc(0.25rem + 2px);
       left: calc(-2.25rem + 2px);
       width: calc(1rem - 4px);
@@ -3097,16 +3097,16 @@
       transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
       @media (prefers-reduced-motion: reduce) {
-        .custom-switch .custom-control-label::after {
+        .custom-tch .custom-control-label::after {
           -webkit-transition: none;
           -o-transition: none;
           transition: none; } }
-    .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    .custom-tch .custom-control-input:checked ~ .custom-control-label::after {
       background-color: #fff;
       -webkit-transform: translateX(0.75rem);
       -ms-transform: translateX(0.75rem);
       transform: translateX(0.75rem); }
-    .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    .custom-tch .custom-control-input:disabled:checked ~ .custom-control-label::before {
       background-color: rgba(0, 123, 255, 0.5); }
   
   .custom-select {
@@ -8347,6 +8347,9 @@
 .profile-userpic img {
     border-radius: 50%;
 }
+
+
+
 
 
 

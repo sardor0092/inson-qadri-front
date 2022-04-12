@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class LoginService {
 
-  api = environment.baseUrl+"/api/account";
+  api = environment.baseUrl+"/api/accaunt";
 
   constructor(public jwtUtil: JwtUtil, public http: HttpClient, public accountService: AccauntService) { }
 
