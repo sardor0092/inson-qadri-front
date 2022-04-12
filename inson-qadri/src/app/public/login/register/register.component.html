@@ -58,7 +58,7 @@
                                         <select formControlName='viloyat' aria-placeholder="Viloyat"
                                             class="form-select input--style-5" aria-label="Default select example">
 
-                                            <option disabled selected [value]="viloyat"
+                                            <option  selected [value]="viloyat"
                                                 *ngFor="let viloyat of viloyalatlar">
                                                 {{viloyat?.name}} </option>
 
@@ -72,7 +72,7 @@
                                     <div class="form-group">
 
                                         <select formControlName='tuman' aria-placeholder="Tuman"
-                                            class="form-select input--style-5 mt-5" aria-label="Default select example">
+                                            class="form-select input--style-5 " aria-label="Default select example">
 
                                             <option selected [value]='tuman' *ngFor="let tuman of tumanlar">
                                                 {{tuman?.name}} Tuman</option>
