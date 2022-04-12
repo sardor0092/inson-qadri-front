@@ -35,7 +35,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -43,9 +42,6 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
     CommonModule,
     
-        
-
-
     MatCheckboxModule,
     MatCheckboxModule,
     MatButtonModule,
@@ -80,7 +76,6 @@ import { BrowserModule } from '@angular/platform-browser';
     MatNativeDateModule,
     MatCardModule,
     FlexLayoutModule,
-    
 
   ],
   exports: [
@@ -123,10 +118,6 @@ import { BrowserModule } from '@angular/platform-browser';
     MatNativeDateModule,
     MatCardModule,
     FlexLayoutModule,
-    
-    
-
-
   ],
   providers: [
     {

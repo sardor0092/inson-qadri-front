@@ -13,7 +13,6 @@ import { User } from 'src/app/shared/model/user';
 export class DashboardComponent implements OnInit {
  opened = false;
 
-
 toggleSide(){
   this.opened = !this.opened;
 }

@@ -24,6 +24,7 @@ import { MenyuComponent } from './user/menyu/menyu.component';
 import { HokimYordamComponent } from './user/hokim-yordam/hokim-yordam.component';
 import { TashkilotArizaComponent } from './user/tashkilot-ariza/tashkilot-ariza.component';
 import { ProfilComponent } from './user/profil/profil.component';
+import { UserComponent } from './user/user/user.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ProfilComponent } from './user/profil/profil.component';
     HokimYordamComponent,
     TashkilotArizaComponent,
     ProfilComponent,
+    UserComponent,
     
     
     

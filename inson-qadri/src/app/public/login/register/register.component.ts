@@ -86,14 +86,6 @@ export class RegisterComponent implements OnInit {
     
   }
 
-
-
-
-
-
-
-
-
   checkIfMatchingPasswords(passwordKey: string, passwordConfirmationKey: string) {
     return (group: FormGroup) => {
       let passwordInput = this.registerForm.controls[passwordKey],

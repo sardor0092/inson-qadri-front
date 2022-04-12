@@ -13,6 +13,7 @@ import { TadbirkorComponent } from './user/tadbirkor/tadbirkor.component';
 import { ViloyatComponent } from './user/viloyat/viloyat.component';
 import { TashkilotArizaComponent } from './user/tashkilot-ariza/tashkilot-ariza.component';
 import { ProfilComponent } from './user/profil/profil.component';
+import { TashkilotComponent } from './user/tashkilot/tashkilot.component';
 
 const routes: Routes = [
 
@@ -37,7 +38,7 @@ const routes: Routes = [
       { path: 'ariza', component: ArizaComponent },
       { path: 'tadbirkor', component: TadbirkorComponent },
       { path: 'mahalla', component: MahallaComponent },
-      { path: 'viloyat', component: ViloyatComponent },
+      { path: 'tashkilot', component: TashkilotComponent },
       { path: 'havola', component: FoyadalilinkComponent },
       { path: 'kutubxona', component: KutubxonaComponent },
       { path: 'subyekt', component: TadbirkorSubyektComponent },

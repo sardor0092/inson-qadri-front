@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tashkilot } from 'src/app/shared/model/tashkilot';
+import { TashkilotService } from './tashkilot.service';
 
 @Component({
   selector: 'app-tashkilot',
@@ -7,36 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TashkilotComponent implements OnInit {
 
-  /**
-   * for testing
-   */
-  tashilotlar: any = [
-    {
-      name: "Adliya",
-      image: "https://rasm.uz/adliya.jpg"
-    },
-    {
-      name: "Adliya",
-      image: "https://rasm.uz/adliya.jpg"
-    },
-    {
-      name: "Adliya",
-      image: "https://rasm.uz/adliya.jpg"
-    },
-    {
-      name: "Adliya",
-      image: "https://rasm.uz/adliya.jpg"
-    },
-    {
-      name: "Adliya",
-      image: "https://rasm.uz/adliya.jpg"
-    },
-
-
-  ]
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  constructor(public tashkilotService:TashkilotService) { }
+  tashkilotlar!: Tashkilot[];
+    ngOnInit(): void {
+      this.tashkilotService.getAll().subscribe
+      (
+      (data:any)=>{
+        this.tashkilotlar=data.content;
+        console.log(data);
+      } 
+      )
+    }
+    title = 'Tashkilotlar';
+  
+    gridColumns = 3;
+  
+    toggleGridColumns() {
+      this.gridColumns = this.gridColumns === 3 ? 4 : 3;
+    }
 }

@@ -15,7 +15,7 @@
 // $inson-qadri-primary: mat.define-palette(mat.$indigo-palette);
 // $inson-qadri-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
-// // The warn palette is optional (defaults to red).
+// // The warn p  alette is optional (defaults to red).
 // $inson-qadri-warn: mat.define-palette(mat.$red-palette);
 
 // // Create the theme object. A theme consists of configurations for individual
@@ -72,11 +72,15 @@
 
 // html, body { height: 100%; }
 // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import  'swiper/scss';
 
 
  @import "~bootstrap/dist/css/bootstrap.css"
 // @import '~mdb-ui-kit/css/mdb.min.css'
- 
+
+
+
+
 
 //  html, body { height: 100%; }
 //  body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
