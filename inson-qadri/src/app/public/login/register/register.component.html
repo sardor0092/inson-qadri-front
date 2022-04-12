@@ -57,8 +57,10 @@
                                     <div class="form-group">
 
                                         <select formControlName='viloyat' aria-placeholder="Viloyat"
+                                        
                                             class="form-select input--style-5" aria-label="Default select example">
-                                            <option selected [value]="viloyat" *ngFor="let viloyat of viloyalatlar">
+                                            
+                                            <option   disabled selected [value]="viloyat" *ngFor="let viloyat of viloyalatlar">
                                                 {{viloyat?.name}} </option>
 
                                         </select>
@@ -71,7 +73,7 @@
                                     <div class="form-group">
 
                                         <select formControlName='tuman' aria-placeholder="Tuman"
-                                            class="form-select input--style-5" aria-label="Default select example">
+                                            class="form-select input--style-5 mt-5" aria-label="Default select example">
 
                                             <option selected [value]='tuman' *ngFor="let tuman of tumanlar">
                                                 {{tuman?.name}} Tuman</option>
@@ -93,59 +95,6 @@
 
                                 </div>
                             </div>
-
-
-
-
-
-
-
-                            <!-- <mat-form-field appearance="fill">
-                                <mat-label>MahsulotTur</mat-label>
-                                <mat-select formControlName='mahalla'>
-                                  <mat-option [value]='mahallalar' *ngFor="let mahalla of mahallalar">{{mahalla.nom}}
-                                  </mat-option>
-                                </mat-select>
-                              </mat-form-field> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
