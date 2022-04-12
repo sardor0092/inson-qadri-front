@@ -79,7 +79,8 @@ import { BrowserModule } from '@angular/platform-browser';
     MatDatepickerModule,
     MatNativeDateModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    
 
   ],
   exports: [
@@ -121,7 +122,9 @@ import { BrowserModule } from '@angular/platform-browser';
     MatDatepickerModule,
     MatNativeDateModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    
+    
 
 
   ],

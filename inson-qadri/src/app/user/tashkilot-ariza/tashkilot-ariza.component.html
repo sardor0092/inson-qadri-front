@@ -4,7 +4,7 @@
         <mat-label>Tashkilotni tanlang</mat-label>
         <mat-select disableRipple >
           
-          <mat-option value="2" *ngFor="let l of tashkilotlar">{{l?.name}}</mat-option>
+          <mat-option value="tashkilot" *ngFor="let l of tashkilotlar">{{l?.name}}</mat-option>
         </mat-select>
       </mat-form-field>
     <div class="row">
@@ -13,7 +13,9 @@
             <mat-card class="example-card2">
                 <mat-card-header>
                     <p id="tag1">Ariza mazmuni</p>
+
                 </mat-card-header>
+              
                 <mat-card-content>
                     <p>
                         <textarea name="" id="" cols="40" rows="10"></textarea>
