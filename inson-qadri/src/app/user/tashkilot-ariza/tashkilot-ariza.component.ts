@@ -5,8 +5,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Tashkilot } from 'src/app/shared/model/tashkilot';
 import { ArizaService } from '../ariza/ariza.service';
 import { TashkilotService } from '../tashkilot/tashkilot.service';
-import { UserService } from '../user/user.service';
-
 @Component({
   selector: 'app-tashkilot-ariza',
   templateUrl: './tashkilot-ariza.component.html',
@@ -28,7 +26,6 @@ export class TashkilotArizaComponent implements OnInit {
   }
 
   constructor(public tashkilotService: TashkilotService,
-    public userService: UserService,
     private formBuilder: FormBuilder,
     public dialog: MatDialog,
     private _snackBar: MatSnackBar,
