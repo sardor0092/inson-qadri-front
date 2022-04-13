@@ -16,7 +16,7 @@ import { LoginService } from '../login.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
+id?:any;
   surovBajarilmoqda = false;
   registerForm: any;
   minDate: Date;
@@ -39,7 +39,6 @@ export class RegisterComponent implements OnInit {
     this.minDate = new Date(currentYear - 60, 0, 0);
     this.maxDate = new Date(currentYear + 0, 0, 0);
   }
-
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
       id: [{ value: '', disabled: true }],
@@ -52,11 +51,10 @@ export class RegisterComponent implements OnInit {
       viloyat: [null],
       tuman: [null],
       mahalla: [null],
-      
+     
     });
     
    
-
 
 
   }
@@ -65,24 +63,21 @@ export class RegisterComponent implements OnInit {
     this.viloyatService.getAll().subscribe(
       (success: any) => {
         this.viloyalatlar = success;
-        console.log(success);
-        
+        this.id=success[0].id;
+        console.log(success[0].id);
       }
     )
-    this.tumanService.getAll().subscribe(
+    console.log(this.id);
+    
+    this.viloyatService.getAllTuman(this.id).subscribe(
       (success: any) => {
-        this.tumanlar= success;
+        this.tumanlar= success
         console.log(success);
         
       }
     )
-    this.mahallaService.getAll().subscribe(
-      (success: any) => {
-        this.mahallalar = success;
-        console.log(success);
-        
-      }
-    )
+    
+
     
   }
 

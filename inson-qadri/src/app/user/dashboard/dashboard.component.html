@@ -15,8 +15,8 @@
 <body>
 
   <div class="wrapper d-flex align-items-stretch">
-   
-  
+
+
 
     <nav id="sidebar" class="">
       <div #drawer class="custom-menu " mode="side">
@@ -39,12 +39,12 @@
           </div>
           <div class="profile-usertitle-job" *ngFor="let l of user?.roles">
             {{l}}
-          
+
           </div>
         </div>
 
       </div>
-     
+
       <div class="p-4">
         <ul class="list-unstyled components mb-5">
           <li class="active">
@@ -57,17 +57,20 @@
             <a routerLink="mahalla"><span class="fa fa-user mr-3"></span> Mahalla mutasaddilari</a>
           </li>
           <li>
-            <a routerLink="tashkilot"><span class="fa fa-building mr-3"></span> Viloyat tashkiotlar</a>
+            <a routerLink="viloyat"><span class="fa fa-building mr-3"></span> Viloyat tashkiotlar</a>
           </li>
           <li>
             <a routerLink="havola"><span class="fa fa-link mr-3"></span> Foydali havolalar</a>
           </li>
+
           <li>
             <a routerLink="kutubxona"><span class="fa fa-book mr-3"></span> Kutubxona</a>
           </li>
+
           <li>
             <a routerLink="subyekt"><span class="fa fa-user mr-3"></span> Tadbirkorlik subyektlari</a>
           </li>
+
           <li>
             <a routerLink="taminot"><span class="fa fa-user mr-3"></span> Ta'minotchi</a>
           </li>
@@ -94,43 +97,34 @@
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5 pt-5">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" routerLink="/user/menyu" >Bosh sahifa</a>
+        <a class="navbar-brand" routerLink="/user/menyu">Bosh sahifa</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <!-- <li class="nav-item active">
+          <ul class="navbar-nav">
+            <!-- <li class="nav-item active">
                     <a class="nav-link" routerLink="/user">Bosh sahifa <span class="sr-only">(current)</span></a>
                 </li> -->
-                <li class="nav-item active">
-                    <a class="nav-link" routerLink="/user/profil">Profil</a>
-                </li>
-                <li class="nav-item active">
-                    <a (click)="chiqish()" class="nav-link" href="#">Chiqish</a>
-                </li>
-    
-            </ul>
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/user/profil">Profil</a>
+            </li>
+            <li class="nav-item active">
+              <a (click)="chiqish()" class="nav-link" href="#">Chiqish</a>
+            </li>
+
+          </ul>
         </div>
-    </nav>
+      </nav>
 
 
-    <!-- <div class="col-12">
-      <div class="counter">
-        
-          <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
-          <p class="count-text ">Mahalla</p>
-      </div>
-    </div> -->
-
-  
- <!--
+      <!--
 Elon berish uchun berilgan elonlar pastga  <router-outlet></router-outlet> ni tepasiga
      -->
 
-  
-     
+
+
       <router-outlet></router-outlet>
     </div>
   </div>

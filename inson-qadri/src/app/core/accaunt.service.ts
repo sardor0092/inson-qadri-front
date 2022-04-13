@@ -29,7 +29,7 @@ export class AccauntService {
   }
 
   public create(userlar: User): Observable<User> {
-    return this.http.post<User>(this.baseApi, userlar);
+    return this.http.post<User>(this.baseApi+"/signup", userlar);
   }
 
   public update(userlar: User): Observable<User> {
