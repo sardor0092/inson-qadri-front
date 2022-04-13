@@ -52,7 +52,7 @@ export class RegisterComponent implements OnInit {
       viloyat: [null],
       tuman: [null],
       mahalla: [null],
-      title:[null]
+      
     });
     
    
