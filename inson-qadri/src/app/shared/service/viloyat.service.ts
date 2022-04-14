@@ -22,6 +22,12 @@ export class ViloyatService {
   getAllSektor(id:number):Observable<Mahalla[]> { 
     return this.http.get<Mahalla[]>(this.api+"/tuman/"+id);
   }
+
+
+
+
+
+  
   create(user: Viloyat): Observable<Viloyat> {
     return this.http.post<Viloyat>(this.api, user);
   }
@@ -31,4 +37,6 @@ export class ViloyatService {
   deleteById(id: number):Observable<any> {
     return this.http.get(this.api + id);
   }
+
+
 }

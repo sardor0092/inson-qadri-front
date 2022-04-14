@@ -16,7 +16,7 @@ import { LoginService } from '../login.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
+id?:any;
   surovBajarilmoqda = false;
   registerForm: any;
   minDate: Date;
@@ -44,7 +44,6 @@ export class RegisterComponent implements OnInit {
     this.minDate = new Date(currentYear - 60, 0, 0);
     this.maxDate = new Date(currentYear + 0, 0, 0);
   }
-
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
       id: [{ value: '', disabled: true }],
@@ -64,9 +63,7 @@ export class RegisterComponent implements OnInit {
 
 
 
-
   }
-  id: any;
   viloyatYuklash() {
     this.registerForm.get('tuman').disable();
     this.registerForm.get('mahalla').disable();
@@ -114,6 +111,8 @@ export class RegisterComponent implements OnInit {
         setTimeout(this.mahallaYuklash, 2000);
       })
     }
+    
+
     
   }
   ngAfterViewInit(): void {

@@ -79,6 +79,7 @@
     background-color: #f5f5f5;
     padding: 20px 0;
     border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 .count-title {
@@ -87,8 +88,18 @@
     margin-top: 10px;
     margin-bottom: 0;
     text-align: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
+.col-6 {
 
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+
+}
+ 
+ 
+
+ 
 .count-text {
     font-size: 13px;
     font-weight: normal;
@@ -104,6 +115,9 @@
     color: #FF5E00;
 }
 
-
+ 
+.box1 {
+  background-color: #66bb6a;
+}
 
 
