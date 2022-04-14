@@ -9,7 +9,16 @@ html {
 	height: 100%;
 	font-family: Ubuntu-Regular, sans-serif;
 }
+.logo{
+	display: flex;
+	justify-content: center!important;
+	img{
+		height: 60px;
+		display: block;
+		margin: auto;
 
+	}
+}
 /*---------------------------------------------*/
 a {
 	font-family: Ubuntu-Regular;
@@ -365,7 +374,7 @@ iframe {
 	padding: 0 20px;
 	width: 100%;
 	height: 62px;
-	background-color: #827ffe;
+	background-color: dodgerblue;
 	border-radius: 3px;
 
 	-webkit-transition: all 0.4s;

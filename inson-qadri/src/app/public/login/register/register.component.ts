@@ -21,11 +21,16 @@ export class RegisterComponent implements OnInit {
   registerForm: any;
   minDate: Date;
   maxDate: Date;
-  viloyalatlar!:Viloyat[]
-  tumanlar!:Tuman[];
+  viloyalatlar!: Viloyat[]
+  tumanlar!: Tuman[];
   mahallalar!: Mahalla[];
+
+  selectedViloyatId!: number | undefined;
+  selectedTumanId!: number | undefined;
+  selectedMahallaId!: number | undefined;
+
   constructor(
-    
+
     private router: Router,
     private mahallaService: MahallaService,
     private tumanService: TumanService,
@@ -49,41 +54,86 @@ export class RegisterComponent implements OnInit {
       username: [null],
       password: [null, [Validators.required, Validators.minLength(6)]],
       confirmPassword: [null, [Validators.required, Validators.minLength(6)]],
-      viloyat: [null],
-      tuman: [null],
-      mahalla: [null],
-      
+      viloyat: ['', Validators.required],
+      tuman: ['', Validators.required],
+      mahalla: ['', Validators.required],
+
     });
-    
-   
+    this.viloyatYuklash();
+
+
 
 
 
   }
-  
-  ngAfterViewInit(): void {
+  id: any;
+  viloyatYuklash() {
+    this.registerForm.get('tuman').disable();
+    this.registerForm.get('mahalla').disable();
     this.viloyatService.getAll().subscribe(
       (success: any) => {
         this.viloyalatlar = success;
         console.log(success);
-        
-      }
-    )
-    this.tumanService.getAll().subscribe(
-      (success: any) => {
-        this.tumanlar= success;
-        console.log(success);
-        
-      }
-    )
-    this.mahallaService.getAll().subscribe(
-      (success: any) => {
-        this.mahallalar = success;
-        console.log(success);
-        
-      }
-    )
+        this.id = success[0].id;
+      },
+      (error: any) => {
+        setTimeout(this.viloyatYuklash, 2000);
+      })
+  }
+  tumanYuklash(){
     
+    console.log(this.registerForm.get('viloyat'));
+    
+    this.selectedViloyatId = this.registerForm.get('viloyat')?.value;
+    console.log(this.selectedViloyatId);
+    
+    this.tumanlar = [];
+    this.mahallalar = [];
+    this.selectedMahallaId = undefined;
+    if(this.selectedViloyatId){
+      this.viloyatService.getAllTuman(this.selectedViloyatId).subscribe((t: Tuman[])=>{
+        this.tumanlar = t;
+        this.registerForm.get('tuman').enable();
+      },
+      (error: any)=>{
+        setTimeout(this.tumanYuklash, 2000);
+      })
+    }
+    
+  }
+  mahallaYuklash(){
+    this.selectedTumanId = this.registerForm.get('tuman')?.value;
+    this.mahallalar = [];
+    this.selectedMahallaId = undefined;
+    if(this.selectedTumanId){
+      this.viloyatService.getAllSektor(this.selectedTumanId).subscribe((m: Mahalla[])=>{
+        this.mahallalar = m;
+        this.registerForm.get('mahalla').enable();
+      },
+      (error: any)=>{
+        setTimeout(this.mahallaYuklash, 2000);
+      })
+    }
+    
+  }
+  ngAfterViewInit(): void {
+
+
+    // this.tumanService.getAll().subscribe(
+    //   (success: any) => {
+    //     this.tumanlar= success;
+    //     console.log(success);
+
+    //   }
+    // )
+    // this.mahallaService.getAll().subscribe(
+    //   (success: any) => {
+    //     this.mahallalar = success;
+    //     console.log(success);
+
+    //   }
+    // )
+
   }
 
   checkIfMatchingPasswords(passwordKey: string, passwordConfirmationKey: string) {
@@ -98,19 +148,28 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
-  
+
   onRegister() {
     const register = this.registerForm.getRawValue();
+    register.territoryId= register.viloyat;
+    // register.tuman = {
+    //   id: register.tuman
+    // }
+    // register.mahalla = {
+    //   id: register.mahalla
+    // }
+    console.log(register);
+    
     this.surovBajarilmoqda = true;
     this.loginService.register(register).subscribe(
       (success) => {
         this.router.navigate(['/login'])
-          //  this.dialogref.close("save")
+        //  this.dialogref.close("save")
       },
       (error) => {
         let message = "bunday foydalanuvchi mavjud!";
 
-        if (error.error.message) {
+        if (error.error && error.error.message) {
           if (error.error.message != "INVALID_CREDENTIALS") {
             message = error.error.message;
           }

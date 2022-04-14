@@ -55,11 +55,10 @@
                                 <div class="col-2">
                                     <div class="form-group">
 
-                                        <select formControlName='viloyat' aria-placeholder="Viloyat"
+                                        <select formControlName='viloyat'  (ngModelChange)="tumanYuklash()" aria-placeholder="Viloyat"
                                             class="form-select input--style-5" aria-label="Default select example">
-
-                                            <option  selected [value]="viloyat"
-                                                *ngFor="let viloyat of viloyalatlar">
+                                            <option value="" disabled selected>Viloyat tanlang</option>
+                                            <option *ngFor="let viloyat of viloyalatlar" [value]="viloyat.id">
                                                 {{viloyat?.name}} </option>
 
                                         </select>
@@ -71,11 +70,12 @@
                                 <div class="col-2">
                                     <div class="form-group">
 
-                                        <select formControlName='tuman' aria-placeholder="Tuman"
+                                        <select  (ngModelChange)="mahallaYuklash()"  formControlName='tuman' aria-placeholder="Tuman"
                                             class="form-select input--style-5 " aria-label="Default select example">
+                                            <option value="" disabled selected>Tumanni tanlang</option>
 
-                                            <option selected [value]='tuman' *ngFor="let tuman of tumanlar">
-                                                {{tuman?.name}} Tuman</option>
+                                            <option selected [value]='tuman.id' *ngFor="let tuman of tumanlar">
+                                                {{tuman?.name}}</option>
 
                                         </select>
 
@@ -84,11 +84,12 @@
 
                                 <div class="form-group">
 
-                                    <select style="margin-top: 40px;" formControlName='mahalla' aria-placeholder="mahalla"
+                                    <select  style="margin-top: 40px;" formControlName='mahalla' aria-placeholder="mahalla"
                                         class="form-select input--style-5" aria-label="Default select example">
+                                        <option value="" disabled selected>Mahallani tanlang</option>
 
-                                        <option selected [value]='mahallalar' *ngFor="let mahalla of mahallalar">
-                                            {{mahalla?.name}} Mahalla</option>
+                                        <option selected [value]='mahalla.id' *ngFor="let mahalla of mahallalar">
+                                            {{mahalla?.name}}</option>
 
                                     </select>
 
@@ -116,7 +117,7 @@
                             </div>
 
 
-                            <button class="btn  btn-info" style="margin-top: 50px; width: 100%;"
+                            <button [disabled]="registerForm.invalid" class="btn  btn-info" style="margin-top: 50px; width: 100%;"
                                 type="submit">Ro'yhatdan
                                 o'tish</button>
 

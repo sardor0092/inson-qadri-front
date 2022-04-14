@@ -54,39 +54,34 @@
 
 
 <br><br>
-<div class="container ">
-    <div class="row">
-        <div class="col-12">
-<div class="card">
-    
-    <div class="card-body">
-      <h5 class="card-title">Ariza mazmuni</h5>
-      <div class="form-group">
-        <input formControlName="title" matInput class="title"> <br>
+<form [formGroup]='createForm' (ngSubmit)="save()">
+    <div class="col-12">
+       
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Ariza mazmuni</h5>
 
-        <label for="exampleFormControlTextarea1">Ariza</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-      <a href="#" class="btn btn-primary" style="margin: 10px;">Ariza namuna</a>
+                <div class="form-group">
+                    <input formControlName="title" matInput class="title"> <br>
+                    <label for="exampleFormControlTextarea1">Ariza</label>
+                    <textarea placeholder="Ariza yozish uchun joy....." formControlName="text" class="form-control"
+                        id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
     </div>
-  </div>
 
-</div>
-
- <div class="col-12">
-    <div style="margin: 10px;">
-        <label for="formFileLg" class="form-label">Arizaga ilova sifatida fayl yuklash</label>
-        <input class="form-control form-control-lg" id="formFileLg" type="file">
-        <label for="formFileLg" class="form-label mt-2">Eslatma:
-             fayl hajmi 50mb dan kam bo'lsin</label>
-      </div>
+    <div class="col-12">
+        <div style="margin: 10px;">
+            <label for="formFileLg" class="form-label">Arizaga ilova sifatida fayl yuklash</label>
+            <input required #inputFile class="form-control form-control-lg" id="formFileLg" type="file">
+            <label for="formFileLg" class="form-label mt-2">Eslatma:
+                fayl hajmi 50mb dan kam bo'lsin</label>
+        </div>
 
 
-      
-    
-    </div> 
-    <button class="btn btn-primary mt-5"> Arizani yuborish</button>
-</div>
-</div>
 
-
+    </div>
+    <button type="submit" class="btn btn-primary mt-5"> Arizani yuborish</button>
+</form>

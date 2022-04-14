@@ -9,12 +9,12 @@ import { environment } from 'src/environments/environment';
 export class FileService {
 
  // API url
-api=environment.baseUrl+"/api/request"
+api=environment.baseUrl+"/api/file"
     
 constructor(private http:HttpClient) { }
 
 // Returns an observable
-singleFileUpload(file:File):Observable<any> {
+singleFileUpload(id: number, file:File):Observable<any> {
     // Create form data
     const formData = new FormData(); 
       
@@ -22,5 +22,5 @@ singleFileUpload(file:File):Observable<any> {
     formData.append("file", file, file.name);
       
     
-    return this.http.post(this.api, formData)
+    return this.http.post(this.api+"/upload/"+id, formData);
 }}

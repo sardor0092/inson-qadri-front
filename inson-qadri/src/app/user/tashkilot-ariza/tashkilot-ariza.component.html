@@ -16,12 +16,11 @@
     <div class="col-12">
         <mat-form-field appearance="fill" class="tashkilot">
             <mat-label>Tashkilotni tanlang</mat-label>
-            <mat-select disableRipple formControlName="tashkilot">
-                <mat-option [value]='tashkilotlar' *ngFor="let l of tashkilotlar">{{l?.name}}</mat-option>
+            <mat-select disableRipple formControlName='tashkilot'>
+                <mat-option [value]='l' *ngFor="let l of tashkilotlar">{{l?.name}}</mat-option>
             </mat-select>
         </mat-form-field>
         <div class="card">
-
             <div class="card-body">
                 <h5 class="card-title">Ariza mazmuni</h5>
 
@@ -39,13 +38,13 @@
     <div class="col-12">
         <div style="margin: 10px;">
             <label for="formFileLg" class="form-label">Arizaga ilova sifatida fayl yuklash</label>
-            <input class="form-control form-control-lg" id="formFileLg" type="file">
+            <input required #inputFile class="form-control form-control-lg" id="formFileLg" type="file">
             <label for="formFileLg" class="form-label mt-2">Eslatma:
                 fayl hajmi 50mb dan kam bo'lsin</label>
         </div>
 
 
- 
+
     </div>
     <button type="submit" class="btn btn-primary mt-5"> Arizani yuborish</button>
 </form>

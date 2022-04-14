@@ -5,6 +5,6 @@ export interface Ariza{
 id:number;
 title:string;
 text:string;
-tashkilot:number;
+tashkilot:Tashkilot;
 
 }
