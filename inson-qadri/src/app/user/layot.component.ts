@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayotComponent implements OnInit {
 
-  sidebarOpen = true;
+  sidebarOpen = false;
   constructor() { }
-  
 
   sidebarToggler(){
     this.sidebarOpen = !this.sidebarOpen;
   }
+
   ngOnInit(): void {
   }
 

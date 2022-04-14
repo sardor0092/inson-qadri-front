@@ -1,138 +1,97 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <title>Sidebar 03</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
-
-<body>
-
-  <div class="wrapper d-flex align-items-stretch">
 
 
 
-    <nav id="sidebar" class="">
-      <div #drawer class="custom-menu " mode="side">
 
-        <button type="button" id="sidebarCollapse" class="btn btn">
+<header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+  <div class="container d-flex align-items-center justify-content-between">
 
-          <span class="active" class="sr-only">Toggle Menu</span>
-          <!-- <mat-icon>view_headline</mat-icon> -->
-        </button>
-      </div>
-      <div class="profile-userpic">
-
-        <img
-          src="https://gravatar.com/avatar/31b64e4876d603ce78e04102c67d6144?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
-          class="img-responsive" alt="">
-
-        <div class="profile-usertitle">
-          <div class="profile-usertitle-name" *ngIf="user">
-            {{user.name}} {{user.surname}}
-          </div>
-          <div class="profile-usertitle-job" *ngFor="let l of user?.roles">
-            {{l}}
-
-          </div>
-        </div>
-
-      </div>
-
-      <div class="p-4">
-        <ul class="list-unstyled components mb-5">
-          <li class="active">
-            <a routerLink="ariza"><span class="fa fa-sticky-note mr-3"></span> Ariza yuborish </a>
-          </li>
-          <li>
-            <a routerLink="tadbirkor"><span class="fa fa-money mr-3"></span> Tadbirkorlik</a>
-          </li>
-          <li>
-            <a routerLink="mahalla"><span class="fa fa-user mr-3"></span> Mahalla mutasaddilari</a>
-          </li>
-          <li>
-            <a routerLink="viloyat"><span class="fa fa-building mr-3"></span> Viloyat tashkiotlar</a>
-          </li>
-          <li>
-            <a routerLink="havola"><span class="fa fa-link mr-3"></span> Foydali havolalar</a>
-          </li>
-
-          <li>
-            <a routerLink="kutubxona"><span class="fa fa-book mr-3"></span> Kutubxona</a>
-          </li>
-
-          <li>
-            <a routerLink="subyekt"><span class="fa fa-user mr-3"></span> Tadbirkorlik subyektlari</a>
-          </li>
-
-          <li>
-            <a routerLink="taminot"><span class="fa fa-user mr-3"></span> Ta'minotchi</a>
-          </li>
-
-        </ul>
-
-
-
-        <div class="footer">
-          <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            &copy;
-            <script>document.write(new Date().getFullYear());</script> "Inson qadri" dasturi 1.00 version Copyright
-            Qarshi IT techno park 2022 <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-              target="_blank">Colorlib.com</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          </p>
-        </div>
-
-      </div>
-    </nav>
-
-
-    <!-- Page Content  -->
-    <div id="content" class="p-4 p-md-5 pt-5">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" routerLink="/user/menyu">Bosh sahifa</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <!-- <li class="nav-item active">
-                    <a class="nav-link" routerLink="/user">Bosh sahifa <span class="sr-only">(current)</span></a>
-                </li> -->
-            <li class="nav-item active">
-              <a class="nav-link" routerLink="/user/profil">Profil</a>
-            </li>
-            <li class="nav-item active">
-              <a (click)="chiqish()" class="nav-link" href="#">Chiqish</a>
-            </li>
-
-          </ul>
-        </div>
-      </nav>
-
-
-      <!--
-Elon berish uchun berilgan elonlar pastga  <router-outlet></router-outlet> ni tepasiga
-     -->
-
-
-
-      <router-outlet></router-outlet>
+    <div class="logo">
+      <h1><a href="index.html">Inson qadri</a></h1>
+      
     </div>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a routerLink="menyu" class="nav-link scrollto active">Home</a></li>
+        <li><a routerLink="ariza" class="nav-link scrollto">Ariza yuborish</a></li>
+        <li><a routerLink="tadbirkor" class="nav-link scrollto">Tadbirkorlik</a></li>
+        <li><a routerLink="mahalla" class="nav-link scrollto">Mahalla mutasaddilari</a></li>
+        <li><a routerLink="viloyat" class="nav-link scrollto">Viloyat</a></li>
+        <li><a routerLink="havola" class="nav-link scrollto">Foydali havola</a></li>
+        <li><a routerLink="kutubxona" class="nav-link scrollto">Kutubxona</a></li>
+        <li><a routerLink="subyekt" class="nav-link scrollto">Subyektlar</a></li>
+        <li><a routerLink="taminot" class="nav-link scrollto">Ta'minotchi</a></li>
+
+
+
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+  </div>
+</header>
+
+
+<section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+  <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">Mahalladagi <span>E'lonlar</span></h2>
+        <p class="animate__animated fanimate__adeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et
+          est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse
+          doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+        <a  class="btn-get-started animate__animated animate__fadeInUp scrollto">Batafsil</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
+        <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et
+          est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse
+          doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+        <a class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
+        <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et
+          est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse
+          doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+        <a  class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+    </a>
+
   </div>
 
-  <!-- <script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script> -->
-</body>
+  <!-- <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+        </g>
+      </svg> -->
+     
 
-</html>
+</section><!-- End Hero --> 
+<router-outlet></router-outlet>
