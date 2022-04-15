@@ -15,19 +15,21 @@ import { TashkilotArizaComponent } from './user/tashkilot-ariza/tashkilot-ariza.
 import { ProfilComponent } from './user/profil/profil.component';
 import { TashkilotComponent } from './user/tashkilot/tashkilot.component';
 import { TaminotchiComponent } from './user/taminotchi/taminotchi.component';
+import { HomeComponent } from './public/home/home.component';
+import { BisnesNamunaComponent } from './user/tadbirkor/bisnes-namuna/bisnes-namuna.component';
 
 const routes: Routes = [
 
   {
     path: '',
     loadChildren: () =>
-      import('./public/login/public.module').then((m) => m.PublicModule),
+      import('./public/public.module').then((m) => m.PublicModule),
   },
 
   {
     path: 'login',
     loadChildren: () =>
-      import('./public/login/login.module').then((m) => m.LoginModule),
+      import('./login/login/login.module').then((m) => m.LoginModule),
 
 
   },
@@ -36,6 +38,8 @@ const routes: Routes = [
     path: 'user', component: DashboardComponent,
     
     children: [
+     
+       
       { path: 'ariza', component: ArizaComponent },
       { path: 'tadbirkor', component: TadbirkorComponent },
       { path: 'mahalla', component: MahallaComponent },
@@ -47,7 +51,8 @@ const routes: Routes = [
       {path:  'menyu' ,component:MenyuComponent},
        {path : 'hokimyordam',component:HokimYordamComponent},
        {path: 'tashkilotariza',component:TashkilotArizaComponent},
-       {path:'profil' ,component:ProfilComponent}
+       {path:'profil' ,component:ProfilComponent} ,
+       {path:'bisnesreja' ,component:BisnesNamunaComponent}
     ]
   },
   

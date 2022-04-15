@@ -8,10 +8,10 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class TashkilotService {
-  api = environment.baseUrl + "/api/tashkilot";
-  constructor(public http:HttpClient) { }
+  api = environment.baseUrl + "/api/admin";
+  constructor(public http:HttpClient) { } 
   getAll():Observable<Tashkilot[]> { 
-    return this.http.get<Tashkilot[]>(this.api);
+    return this.http.get<Tashkilot[]>(this.api+"/tashkilot");
   }
   create(user: Tashkilot): Observable<Tashkilot> {
     return this.http.post<Tashkilot>(this.api, user);

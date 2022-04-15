@@ -33,3 +33,82 @@
     font-family: sans-serif;
    
    }
+
+
+   body{
+      background: rgb(255,255,255);
+   }
+   .card{
+      box-shadow: 0 0 15px rgba(0,0,0,0.07);
+      margin: 1rem 0;
+      border-radius: 1rem;
+   }
+   .page-header{
+      display: flex;
+      align-items: center;
+   }
+   .developer6669{
+      display: flex;
+      padding: 1rem 2rem;		
+   }
+   a.developer6669{	
+      text-decoration: none;
+   }		
+   .developer6669:hover{
+      opacity: 0.7;					
+   }		
+   .developer6669 .img-container{
+      padding: 0.3rem;
+      border-radius: 50%;
+      background-color: #dbe4df;
+      margin: 0.5rem;
+   }		
+   .developer6669 .img-container img{
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+   }
+   .developer6669 .text{
+      display: flex;
+       align-items: center;
+   }
+   .developer6669 .title{
+      color: #333;
+   }
+   .developer6669 .sub-title{
+      line-height: 0.2;
+      color: #b1b1b1;
+   }
+   .section-status{
+      background-color: #fff;
+   }
+   .section-status .img-container{
+      text-align: center;
+      padding: 1rem 0;
+   }
+   .section-status .img-container img{
+      height: 10rem;
+   }			
+   .section-status .text{
+      text-align: center;
+   }
+   .section-status .text .title{
+      font-size: 2rem;
+   }
+   .section-status .text .sub-title{
+      font-size: 1.3rem;
+   }
+   .section-status .mey-text-color-gray{
+      color: #878787;
+   }
+   .section-status .footer{
+      text-align: center;
+      padding: 2rem 0;
+   }
+   .mey-btn{
+      border:none;
+   }
+   .mey-btn-md{
+      padding: 1rem 1.8rem;
+      border-radius: 3rem;
+   }

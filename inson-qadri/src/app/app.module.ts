@@ -24,11 +24,13 @@ import { MenyuComponent } from './user/menyu/menyu.component';
 import { HokimYordamComponent } from './user/hokim-yordam/hokim-yordam.component';
 import { TashkilotArizaComponent } from './user/tashkilot-ariza/tashkilot-ariza.component';
 import { ProfilComponent } from './user/profil/profil.component';
+import { HomeComponent } from './public/home/home.component';
+import { BisnesNamunaComponent } from './user/tadbirkor/bisnes-namuna/bisnes-namuna.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
+    
     TashkilotComponent,
     ArizaComponent,
     TadbirkorComponent,
@@ -41,13 +43,17 @@ import { ProfilComponent } from './user/profil/profil.component';
     MenyuComponent,
     HokimYordamComponent,
     TashkilotArizaComponent,
-    ProfilComponent    
+    ProfilComponent,
+    DashboardComponent,
+    BisnesNamunaComponent
+        
     
     
     
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
@@ -55,7 +61,6 @@ import { ProfilComponent } from './user/profil/profil.component';
     MaterialModule,    
     CoreModule,
     SharedModule,
-    BrowserAnimationsModule
   ],
   providers: [
 
