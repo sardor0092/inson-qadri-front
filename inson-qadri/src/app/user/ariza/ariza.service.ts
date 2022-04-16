@@ -9,11 +9,12 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ArizaService {
-  api = environment.baseUrl + "/api/request";
+ 
+  api = environment.baseUrl + "/api/people/request";
   constructor(public http:HttpClient) { }
   
-  getAll():Observable<Tashkilot[]> { 
-    return this.http.get<Tashkilot[]>(this.api);
+  getAll():Observable<Ariza[]> { 
+    return this.http.get<Ariza[]>(this.api);
   }
   create(user: Ariza): Observable<Ariza>  {
     return this.http.post<Ariza>(this.api, user);
@@ -22,6 +23,7 @@ export class ArizaService {
     return this.http.put<Ariza>(this.api, user);
   }
   deleteById(id: number):Observable<any> {
-    return this.http.get(this.api + id);
-  }
+    return this.http.get(this.api + "/"+ id);
+  } 
+
 }

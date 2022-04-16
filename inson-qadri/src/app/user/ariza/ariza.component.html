@@ -54,14 +54,20 @@
 
       <div class="col-12 col-md-6 pt-5">
         <div style="height: 342px; padding: 42px;" class="card ">
-          <p class="p1">ESLATMA</p>
-
-          <div class="card-body">
-            <h3 class="card-title">
-              Yuborilgan
+          <p class="p1">ESLATMA <br> Yuborilgan
               arizalarnig
               javob xati 15 kun ichida keladi
+          </p>
+          <div class="card-body overflow-auto">
+            <h3 class="card-title">
+                Sizning arizalaringiz
+                
             </h3>
+            <div class="d-block myariza" *ngFor="let a of arizalar">
+              <div class="card">
+                  <p>{{a.title}}</p>
+              </div>
+          </div>
           </div>
         </div>
       </div>
